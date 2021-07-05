@@ -1,0 +1,44 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div #myBox class="box-style">
+  ANGULAR
+  <div style="width: 100px;height:50px;background:brown;">AA</div>
+  <div style="width: 100px;height:50px;background:yellow;">BB</div>
+  <div style="width: 100px;height:50px;background:seagreen;">CC</div>
+  <span>app:{{title4}},app</span>
+  <input type="text" [(ngModel)]="title4">
+</div>
+<hr>
+<button (click)="changeViewFun()">切换</button>
+<hr>
+<div *ngIf="!show">
+  <div>子组件内容</div>
+    <hr>
+    <!-- <app-home></app-home> -->
+    <!-- <app-news></app-news> -->
+    <app-life [life]="title4"></app-life>
+    <hr>
+  <div>子组件内容</div>
+</div>
+
+<div *ngIf="show">
+  <div>路由</div>
+    <hr>
+    <a [routerLink]="['/about/', title4]" routerLinkActive="router-link-active" >About</a><br>
+    <a routerLink="/home" routerLinkActive="router-link-active" >Home</a><br>
+    <a [routerLink]="['/life']" routerLinkActive="router-link-active" >Life</a><br>
+    <a [routerLink]="['/news']" [queryParams]="{aid: 123}" routerLinkActive="router-link-active" >News</a><br>
+    <a [routerLink]="['/interface']" routerLinkActive="router-link-active" >Interface</a><br>
+    <hr>
+  <div>路由</div>
+</div>
+
+
+<router-outlet></router-outlet>

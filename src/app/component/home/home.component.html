@@ -1,0 +1,7 @@
+<div class="box-style  margin-top20">
+    <input type="text" [(ngModel)]="title">
+    <app-about [title]="title" [homeFun]="homeFun" [home]="this" (outer)="runHome($event)"></app-about>
+    <p>home works!</p>
+    <p>home指令</p>
+    <app-news #news></app-news>
+</div>

@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.router-link-active {
+    color: coral!important;
+}
+
+.margin-left20 {
+    margin-left: 20px;
+}

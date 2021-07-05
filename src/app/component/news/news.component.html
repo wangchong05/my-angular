@@ -1,0 +1,17 @@
+<div>
+    <p>news works!</p>
+    <hr>
+    
+    {{title}}
+    {{username}}
+    {{objValue.c}}
+    <div [title]="title">鼠标放上去会有提示</div>
+    <hr>
+    <ol *ngFor="let item of arr">
+        <li>{{item}}</li>
+    </ol>
+    <img src="assets/images/001.png" alt="收藏">
+    <img style="width: 200px;height: 100px;box-sizing: border-box;" [src]="imgUrl" alt="收藏">
+    <hr>
+    <p>news指令</p>
+</div>
